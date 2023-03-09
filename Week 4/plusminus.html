@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script>
+            function plus() {
+                var num = document.getElementById("num")
+                if (num.value == 5) changecolor()
+                else num.value = Number(num.value) + 1
+            }
+            function minus() {
+                var num = document.getElementById("num")
+                if (num.value == 0) changecolor()
+                else num.value = Number(num.value) - 1
+            }
+            function changecolor() {
+                var color = Math.floor(Math.random() * 0xffffff)
+                color = color.toString(16)
+                document.body.style.backgroundColor = "#" + color
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick=minus()>-</button>
+        <input value="0" id="num">
+        <button onclick=plus()>+</button>
+    </body>
+</html>
